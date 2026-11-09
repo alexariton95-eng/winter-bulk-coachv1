@@ -211,7 +211,51 @@ table{border-color:#ffffff20!important}td,th{border-color:#ffffff18!important}
 @media(max-width:390px){.app-header h1{font-size:34px!important}.screen-intro h2{font-size:35px!important}.today-strip strong{font-size:16px}.photo-tile{height:125px}}
 </style>
 
+<style id="winter-v7-layout">
+/* V7: a real structural redesign, not another colour-only theme */
+:root{--v7-bg:#080d13;--v7-panel:#111a22;--v7-line:rgba(190,210,220,.12);--v7-lime:#d8ff52;--v7-cyan:#70e2d2}
+html,body{min-height:100%;background:#080d13!important}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif!important}
+.v7-sidebar{display:none}
+@media(min-width:900px){
+ body{padding-left:258px!important}
+ .v7-sidebar{display:flex;position:fixed;z-index:80;inset:0 auto 0 0;width:258px;padding:24px 16px 18px;flex-direction:column;background:#090e13;border-right:1px solid var(--v7-line);box-shadow:12px 0 40px #0004}
+ .v7-brand{display:flex;align-items:center;gap:11px;padding:4px 8px 26px;border-bottom:1px solid var(--v7-line)}
+ .v7-brand-mark{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:var(--v7-lime);color:#10150b;font-weight:950;letter-spacing:-.08em}
+ .v7-brand b{display:block;font-size:14px;letter-spacing:-.04em;color:#f4f7f2}.v7-brand small{display:block;font-size:9px;color:#82908c;letter-spacing:.15em;margin-top:4px}
+ .v7-nav-label{font-size:9px;letter-spacing:.18em;color:#65736f;padding:22px 10px 8px}.v7-nav{display:grid;gap:5px}
+ .v7-nav button{display:flex!important;align-items:center;gap:12px;text-align:left!important;width:100%;padding:12px 13px!important;border:1px solid transparent!important;border-radius:12px!important;background:transparent!important;color:#9ba8a3!important;box-shadow:none!important;font-size:12px!important}
+ .v7-nav button .v7-icon{width:22px;text-align:center;font-size:16px;color:#8b9b94}.v7-nav button.active{background:#d8ff5212!important;border-color:#d8ff5226!important;color:#eff7dc!important}.v7-nav button.active .v7-icon{color:var(--v7-lime)}
+ .v7-side-foot{margin-top:auto;padding:14px 10px;border-top:1px solid var(--v7-line);font-size:10px;line-height:1.6;color:#68766f}
+ header.app-header{margin:0!important;padding:17px 34px!important;height:112px;border-radius:0!important;border:0!important;border-bottom:1px solid var(--v7-line)!important;background:#0a1017!important;box-shadow:none!important;display:flex;align-items:center;justify-content:space-between;position:relative}
+ .app-header .brandline{display:none!important}.app-header .header-title-row{width:100%;display:flex;align-items:center;justify-content:space-between}
+ .app-header .header-title-row>div:first-child{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.app-header .eyebrow{font-size:9px!important;letter-spacing:.16em!important;color:#a7b39e!important}
+ .app-header h1{font-size:22px!important;line-height:1!important;margin:0!important;letter-spacing:-.06em!important}.app-header h1 span{color:var(--v7-lime)!important}.app-header p{font-size:11px!important;margin:0!important;color:#87958f!important}.app-header .header-orbit{width:56px!important;height:56px!important}
+ main.wrap{max-width:none!important;margin:0!important;padding:30px 36px 70px!important}.tabs{display:none!important}.bottom-nav{display:none!important}
+ .tab.active{max-width:1480px;margin:0 auto}.screen-intro{padding:26px 0 20px!important;margin-bottom:10px!important}.screen-intro h2{font-size:clamp(38px,4vw,58px)!important;line-height:.98!important;letter-spacing:-.07em!important}.screen-intro p{max-width:560px;font-size:14px!important}
+ #today .command-hero{min-height:330px!important;display:grid!important;grid-template-columns:1.1fr .9fr!important;align-items:center!important;padding:38px!important;border-radius:26px!important}
+ #today .command-hero h2{font-size:clamp(42px,5vw,68px)!important;line-height:.96!important;letter-spacing:-.075em!important}#today .hero-visual img{max-height:290px!important;object-fit:contain!important}
+ #today .stats{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important}#today .stat{padding:20px!important;min-height:125px}#today .stat b{font-size:32px!important}
+ #today .today-strip{padding:22px 26px!important;border-radius:20px!important}#today .shortcut-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}#today .shortcut-card{min-height:145px!important}
+ .panel{padding:22px!important;border-radius:20px!important;margin:14px 0!important}.grid2{gap:14px!important}.photo-grid,.movement-gallery{gap:14px!important}.photo-tile{height:210px!important}
+}
+@media(max-width:899px){.v7-sidebar{display:none!important}header.app-header{padding:18px 17px 20px!important}.app-header .header-title-row{align-items:flex-start}.app-header .header-orbit{display:none!important}.app-header h1{font-size:35px!important;letter-spacing:-.07em!important}.app-header .brandline{margin-bottom:17px}.tabs{display:none!important}.bottom-nav{display:grid!important}main.wrap{padding-top:14px!important}.tab.active{padding-bottom:90px}#today .stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
 </head><body>
+<aside class="v7-sidebar" aria-label="Winter Bulk navigation">
+ <div class="v7-brand"><div class="v7-brand-mark">WB</div><div><b>WINTER BULK</b><small>PERFORMANCE OS · 26/27</small></div></div>
+ <div class="v7-nav-label">WORKSPACE</div><nav class="v7-nav">
+ <button class="active" data-v7-tab="today"><span class="v7-icon">⌂</span>Overview</button>
+ <button data-v7-tab="recipes"><span class="v7-icon">◉</span>Nutrition & recipes</button>
+ <button data-v7-tab="training"><span class="v7-icon">✳</span>Training log</button>
+ <button data-v7-tab="progress"><span class="v7-icon">↗</span>Progress analytics</button></nav>
+ <div class="v7-nav-label">TOOLS & LIBRARY</div><nav class="v7-nav">
+ <button data-v7-tab="myplans"><span class="v7-icon">▤</span>Workout builder</button><button data-v7-tab="planner"><span class="v7-icon">▦</span>Meal planner</button>
+ <button data-v7-tab="calculator"><span class="v7-icon">⌗</span>Macro calculator</button><button data-v7-tab="shop"><span class="v7-icon">▣</span>Shopping list</button>
+ <button data-v7-tab="social"><span class="v7-icon">◎</span>Instagram saves</button><button data-v7-tab="library"><span class="v7-icon">◇</span>Exercise library</button>
+ <button data-v7-tab="records"><span class="v7-icon">♜</span>Personal records</button><button data-v7-tab="guide"><span class="v7-icon">✧</span>Bulk playbook</button>
+ <button data-v7-tab="settings"><span class="v7-icon">⚙</span>Settings & backup</button></nav>
+ <div class="v7-side-foot">WINTER BUILD · SEASON 01<br>Consistency compounds.</div></aside>
 <header class="app-header"><div class="brandline"><span class="brand-mark">WB</span><span class="brand-kicker">WINTER BULK / 26—27</span><button class="header-menu" id="openMore" aria-label="Open menu">•••</button></div><div class="header-title-row"><div><span class="eyebrow">YOUR PERSONAL PERFORMANCE HUB</span><h1>Build <span>better.</span></h1><p>Train with intent. Eat for growth. Track the work.</p></div><div class="header-orbit"><b>WB</b><i>SEASON 01</i></div></div></header>
 <main class="wrap">
 <nav class="tabs"><button class="active" data-tab="today">Today</button><button data-tab="recipes">Recipes</button><button data-tab="training">Training</button><button data-tab="social">Instagram saves</button><button data-tab="myplans">My plans</button><button data-tab="shop">Shopping</button><button data-tab="progress">Progress</button><button data-tab="guide">Bulk guide</button><button data-tab="planner">Plans</button><button data-tab="calculator">Calculator</button><button data-tab="library">Exercise library</button><button data-tab="records">Records</button><button data-tab="settings">Themes</button></nav>
@@ -449,4 +493,15 @@ document.querySelectorAll('.shortcut-card[data-tab]').forEach(b=>b.addEventListe
 const foodTiles=[['BREAKFAST','Protein porridge','https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=700&auto=format&fit=crop&q=80'],['LUNCH','Chicken & rice','https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=700&auto=format&fit=crop&q=80'],['DINNER','Salmon & greens','https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=700&auto=format&fit=crop&q=80'],['SNACK','Greek yoghurt bowl','https://images.unsplash.com/photo-1488477181946-6428a0291777?w=700&auto=format&fit=crop&q=80']];
 const gallery=document.getElementById('foodGallery');if(gallery){gallery.innerHTML=foodTiles.slice(0,2).map(x=>`<div class="photo-tile"><img loading="lazy" src="${x[2]}" alt="${x[1]}" onerror="this.style.display='none'"><span>${x[0]}</span><b>${x[1]}</b></div>`).join('')}
 
-</script></body></html>
+</script><script id="winter-v7-navigation">
+(function(){
+ const links=[...document.querySelectorAll('[data-v7-tab]')];
+ function activate(id){const target=document.querySelector('.tabs [data-tab="'+id+'"]');if(target)target.click();links.forEach(b=>b.classList.toggle('active',b.dataset.v7Tab===id));document.querySelectorAll('[data-bottom]').forEach(b=>b.classList.toggle('active',b.dataset.bottom===id));}
+ links.forEach(b=>b.addEventListener('click',()=>activate(b.dataset.v7Tab)));
+ document.querySelectorAll('.tabs [data-tab]').forEach(b=>b.addEventListener('click',()=>links.forEach(x=>x.classList.toggle('active',x.dataset.v7Tab===b.dataset.tab))));
+ const title=document.querySelector('#today .command-hero h2');if(title)title.innerHTML='Build strength.<br><em>Own your winter.</em>';
+ const intro=document.querySelector('#today .command-hero p');if(intro)intro.textContent='Your training, nutrition and progress — organised in one place.';
+ document.body.classList.add('winter-v7');
+})();
+</script>
+</body></html>
