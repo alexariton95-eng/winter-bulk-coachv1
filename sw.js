@@ -1,4 +1,4 @@
-const CACHE = 'winter-bulk-coach-v4';
+const CACHE = 'winter-bulk-coach-v8';
 const CORE = ['./', './index.html', './manifest.webmanifest', './winter-bulk-visual.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)));

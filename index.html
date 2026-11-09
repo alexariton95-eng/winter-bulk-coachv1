@@ -26,6 +26,9 @@ header{background:linear-gradient(125deg,rgba(7,15,28,.98),rgba(26,23,52,.94));b
 
 <style id="winter-dark-glass-fix">
 :root{color-scheme:dark;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#070a12;color:#e8eefb}html,body{background:radial-gradient(ellipse at 15% 0%,#18233a 0%,#090e19 42%,#05070d 100%)!important;color:#e8eefb!important}body{min-height:100vh}header{background:linear-gradient(135deg,rgba(17,28,48,.96),rgba(34,23,62,.88))!important;border:1px solid rgba(148,163,255,.2);box-shadow:0 12px 36px rgba(0,0,0,.35),inset 0 1px rgba(255,255,255,.08);backdrop-filter:blur(18px);color:#f5f7ff!important}header p{color:#aab8d1!important}.wrap{color:#e8eefb}.tabs{background:rgba(7,10,18,.88)!important;backdrop-filter:blur(16px)}button{background:rgba(27,39,62,.78)!important;color:#e8eefb!important;border:1px solid rgba(147,166,218,.2)!important;border-radius:12px!important;box-shadow:inset 0 1px rgba(255,255,255,.06)}button.active,button.primary,.tabs button.active{background:linear-gradient(135deg,#6252c8,#287e9a)!important;color:white!important;border-color:rgba(156,142,255,.55)!important;box-shadow:0 5px 20px rgba(90,74,205,.24)}.panel,.stat,.meal,.logitem,.notice{background:linear-gradient(145deg,rgba(24,34,54,.88),rgba(12,19,33,.92))!important;color:#e8eefb!important;border:1px solid rgba(145,164,218,.19)!important;border-radius:18px!important;box-shadow:0 10px 28px rgba(0,0,0,.25),inset 0 1px rgba(255,255,255,.055)!important;backdrop-filter:blur(18px)}.stat b,h2,h3,strong,label{color:#edf2ff!important}.stat small,.muted,.meal p,header p{color:#9eacc4!important}.bar{background:#253149!important}.fill{background:linear-gradient(90deg,#43d7d0,#8a75ff)!important}.field input,.field select,input,select,textarea{background:rgba(5,10,20,.8)!important;color:#eef3ff!important;border:1px solid rgba(140,160,215,.28)!important;border-radius:10px!important}a{color:#69d8e5}.pill{background:rgba(100,87,196,.22)!important;color:#c7c0ff!important;border:1px solid rgba(150,137,255,.25)}.recipe{color:#dbe5f8}.check{color:#e7efff}.hero-art{border-radius:16px;border:1px solid rgba(145,164,218,.22);box-shadow:0 12px 32px rgba(0,0,0,.32);max-width:100%}canvas{max-width:100%}input[type=checkbox]{accent-color:#7b70ef}hr{border-color:rgba(145,164,218,.18)}
+
+/* Instagram save library */
+textarea{font:inherit;resize:vertical}.saved-card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(20,31,51,.88),rgba(7,12,23,.94));border-radius:14px;padding:12px;margin:10px 0;overflow-wrap:anywhere}.saved-card h3{margin:0 0 6px}.saved-card p{font-size:12px;line-height:1.5;color:var(--muted);white-space:pre-wrap}.saved-card .actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.saved-card a{color:var(--accent);font-size:12px}.tag{display:inline-block;padding:4px 8px;border:1px solid var(--line);border-radius:20px;color:var(--accent);font-size:10px;margin-bottom:7px}
 </style>
 
 <style id="theme-system-v2">
@@ -76,10 +79,61 @@ body.theme-violet .tabs button.active,body.theme-violet .primary{background:line
 .theme-grid button[aria-pressed="true"]{outline:2px solid var(--accent);outline-offset:2px}
 </style>
 
+
+<style id="winter-bulk-v3-layout">
+:root{--bg:#020306;--surface:rgba(10,13,21,.91);--surface2:rgba(17,22,33,.96);--ink:#f4f7ff;--muted:#8792a7;--line:rgba(190,205,230,.13);--accent:#dce7ff;--accent2:#667dff;color-scheme:dark}
+html,body{background:#020306!important;color:#f4f7ff!important}
+body{background:radial-gradient(ellipse at 50% -15%,rgba(46,55,83,.28),transparent 42%),linear-gradient(180deg,#05070c 0%,#020306 62%,#000 100%)!important;padding-bottom:88px}
+header{position:relative;overflow:hidden;margin:10px 12px 0;padding:25px 20px 23px;border-radius:24px;background:linear-gradient(135deg,rgba(14,18,29,.98),rgba(5,7,12,.98))!important;border:1px solid rgba(198,211,239,.14)!important;box-shadow:0 20px 55px #000b,inset 0 1px rgba(255,255,255,.07)!important}
+header:before{content:"WINTER BULK / PERFORMANCE SYSTEM";display:block;color:#77839b;font-size:9px;letter-spacing:.22em;font-weight:800;margin-bottom:10px}
+header h1{font-size:clamp(24px,6vw,32px);letter-spacing:-.045em;font-weight:850}
+header p{font-size:11px!important;letter-spacing:.06em;color:#8792a7!important}
+.wrap{max-width:780px;padding:10px 13px 105px}
+.tabs{top:0;gap:7px;padding:10px 1px 12px;background:rgba(2,3,6,.94)!important;backdrop-filter:blur(20px);scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}.tabs button{border-radius:999px!important;padding:10px 14px;font-size:11px;letter-spacing:.02em;background:linear-gradient(180deg,#111722,#080b12)!important;border:1px solid rgba(175,190,220,.12)!important;color:#9ca9bd!important;box-shadow:inset 0 1px rgba(255,255,255,.035)!important}
+.tabs button.active{background:linear-gradient(135deg,#e8efff,#7386ff)!important;color:#080b13!important;border-color:transparent!important;box-shadow:0 0 22px #647aff30!important;font-weight:800}
+.panel,.stat{border-radius:20px!important;background:linear-gradient(145deg,rgba(15,20,31,.97),rgba(6,8,14,.98))!important;border:1px solid rgba(176,193,225,.13)!important;box-shadow:0 18px 42px #0008,inset 0 1px rgba(255,255,255,.045)!important;backdrop-filter:blur(22px)}
+.panel{padding:17px;margin:11px 0}.stats{gap:10px}.stat{padding:15px}.stat b{font-size:28px;letter-spacing:-.05em;color:#f4f7ff!important}.stat small{font-size:10px;color:#8490a5!important;letter-spacing:.04em;text-transform:uppercase}
+h2{font-size:17px;font-weight:800;letter-spacing:-.025em;color:#f3f6ff!important}h3,.section{color:#a9b9ff!important;font-weight:750;letter-spacing:.02em}
+.muted,.footer{color:#8792a7!important}.pill{background:rgba(121,143,255,.13)!important;border:1px solid rgba(130,150,255,.18);color:#cbd4ff!important}
+.meal{padding:15px 0;border-color:rgba(170,190,220,.11)!important}.meal strong{font-size:14px;color:#f3f6ff!important}.meal p{color:#8e9ab0!important}.meal small{color:#a7b7ff!important}
+.recipe,.notice{border:1px solid rgba(160,180,220,.12);border-radius:15px!important;background:linear-gradient(145deg,#111827,#080b12)!important;color:#dce4f5!important}
+button,.btn{border-radius:13px!important;background:linear-gradient(180deg,#151c2a,#0b1019)!important;border:1px solid rgba(170,190,225,.15)!important;color:#e7edfa!important;transition:transform .15s ease,filter .15s ease}
+button:active{transform:scale(.98)}button.primary,.primary,.tabs button.active{background:linear-gradient(115deg,#dbe5ff,#788bff)!important;color:#080b14!important;border:0!important;box-shadow:0 7px 24px #7185ff25!important}
+.field{color:#a7b3c8!important}.field input,.field select,input,select,textarea{background:#05080e!important;color:#edf2ff!important;border:1px solid rgba(166,184,220,.18)!important;border-radius:12px!important;padding:12px!important}
+.bar{height:7px;background:#1c2433!important}.fill{background:linear-gradient(90deg,#dce7ff,#6c83ff)!important;border-radius:20px}
+.custom-day{background:linear-gradient(145deg,#101725,#070a11)!important;border:1px solid rgba(165,185,225,.14)!important;border-radius:17px!important;padding:14px}
+.exercise-card{border-color:rgba(170,190,220,.12)!important;padding:12px 0}.exercise-card b{color:#f1f4fc}.exercise-card small{color:#8895ab}
+.theme-grid button{min-height:110px;border-radius:17px!important;background:linear-gradient(145deg,#111827,#070a11)!important}.theme-grid button[aria-pressed="true"]{outline:2px solid #e4eaff;box-shadow:0 0 25px #899fff24!important}
+.sw-abyss{background:linear-gradient(100deg,#000,#090b10,#e5ebf8)}
+.bottom-nav{position:fixed;z-index:20;left:10px;right:10px;bottom:calc(9px + env(safe-area-inset-bottom));max-width:760px;margin:auto;display:grid;grid-template-columns:repeat(5,1fr);gap:5px;padding:8px 7px;border:1px solid rgba(174,192,226,.17);border-radius:21px;background:rgba(5,7,12,.94);backdrop-filter:blur(24px);box-shadow:0 15px 45px #000b,inset 0 1px rgba(255,255,255,.06)}
+.bottom-nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:6px 3px;border:0!important;background:transparent!important;box-shadow:none!important;color:#77839a!important;border-radius:13px!important}
+.bottom-nav button span{font-size:20px;line-height:1.1}.bottom-nav button small{font-size:9px;letter-spacing:.04em}.bottom-nav button.active{background:linear-gradient(135deg,rgba(210,223,255,.16),rgba(108,130,255,.18))!important;color:#e6ecff!important;outline:1px solid rgba(160,180,255,.18)}
+/* BLACKOUT: deliberately near-total black with crisp monochrome contrast. */
+body.theme-abyss{--bg:#000;--surface:rgba(5,6,8,.98);--surface2:rgba(11,12,15,.99);--ink:#f7f8fb;--muted:#858991;--line:rgba(230,235,245,.12);--accent:#f1f4fa;--accent2:#737b8c;background:#000!important}
+body.theme-abyss,body.theme-abyss html{background:#000!important}
+body.theme-abyss header{background:linear-gradient(145deg,#090a0d,#000)!important;border:1px solid #252830!important;box-shadow:0 20px 60px #000,inset 0 1px #ffffff0b!important}
+body.theme-abyss .panel,body.theme-abyss .stat,body.theme-abyss .custom-day{background:linear-gradient(145deg,#090a0d,#030405)!important;border:1px solid #24262c!important;box-shadow:0 18px 42px #000,inset 0 1px #ffffff08!important}
+body.theme-abyss .tabs,body.theme-abyss .bottom-nav{background:rgba(0,0,0,.97)!important;border-color:#24262c!important}
+body.theme-abyss button.primary,body.theme-abyss .primary,body.theme-abyss .tabs button.active{background:linear-gradient(110deg,#f1f3f7,#89909c)!important;color:#050608!important;box-shadow:0 5px 24px #ffffff12!important}
+body.theme-abyss .pill{background:#14161b!important;color:#e6e8ed!important;border-color:#292c33!important}
+body.theme-abyss .bar{background:#191b20!important}body.theme-abyss .fill{background:linear-gradient(90deg,#f4f5f8,#777f8d)!important}
+body.theme-abyss .recipe,body.theme-abyss .notice{background:#090a0d!important;border-color:#272a30!important}
+body.theme-abyss .bottom-nav button.active{background:#17191f!important;color:#fff!important}
+@media(min-width:700px){.bottom-nav{bottom:16px}.wrap{padding-bottom:120px}}
+</style>
+
 </head><body>
 <header><h1>💪 Winter Bulk Coach</h1><p>Food · recipes · training · recovery · progress</p></header>
 <main class="wrap">
-<nav class="tabs"><button class="active" data-tab="today">Today</button><button data-tab="recipes">Recipes</button><button data-tab="training">Training</button><button data-tab="myplans">My plans</button><button data-tab="shop">Shopping</button><button data-tab="progress">Progress</button><button data-tab="guide">Bulk guide</button><button data-tab="planner">Plans</button><button data-tab="calculator">Calculator</button><button data-tab="library">Exercise library</button><button data-tab="records">Records</button><button data-tab="settings">Themes</button></nav>
+<nav class="tabs"><button class="active" data-tab="today">Today</button><button data-tab="recipes">Recipes</button><button data-tab="training">Training</button><button data-tab="social">Instagram saves</button><button data-tab="myplans">My plans</button><button data-tab="shop">Shopping</button><button data-tab="progress">Progress</button><button data-tab="guide">Bulk guide</button><button data-tab="planner">Plans</button><button data-tab="calculator">Calculator</button><button data-tab="library">Exercise library</button><button data-tab="records">Records</button><button data-tab="settings">Themes</button></nav>
+<nav class="bottom-nav" aria-label="Main navigation">
+<button data-bottom="today" class="active"><span>⌂</span><small>Home</small></button>
+<button data-bottom="recipes"><span>◈</span><small>Food</small></button>
+<button data-bottom="training"><span>✦</span><small>Train</small></button>
+<button data-bottom="progress"><span>⌁</span><small>Progress</small></button>
+<button data-bottom="settings"><span>•••</span><small>More</small></button>
+</nav>
 
 <section id="today" class="tab active">
 <div class="stats">
@@ -92,6 +146,20 @@ body.theme-violet .tabs button.active,body.theme-violet .primary{background:line
 </section>
 
 <section id="recipes" class="tab"><div class="panel"><h2>Recipe book</h2><p class="muted">Simple batch-cook recipes for the main meals and dinner rotation. Dry weights are stated for rice and pasta.</p><div id="recipeBook"></div></div></section>
+
+<section id="social" class="tab">
+<div class="panel"><h2>Save from Instagram</h2><p class="muted">Paste an Instagram post or Reel link, then paste its caption or the useful text. Choose whether it is a recipe or workout, or let the app suggest a category. Instagram often blocks automatic access to captions and Reel contents, so this saves your link and the details you provide rather than logging into or scraping Instagram.</p>
+<label class="field">Instagram post / Reel URL<input id="igUrl" type="url" placeholder="https://www.instagram.com/reel/..." inputmode="url"></label>
+<label class="field">Post caption, ingredients, instructions or workout details<textarea id="igText" rows="5" placeholder="Paste the Instagram caption or type the recipe/workout details here"></textarea></label>
+<div class="grid2"><label class="field">Save as<select id="igType"><option value="auto">Auto-detect</option><option value="recipe">Recipe</option><option value="workout">Workout</option><option value="reference">Other fitness inspiration</option></select></label><label class="field">Title<input id="igTitle" placeholder="Optional — detected if blank"></label></div>
+<div id="igGuess" class="notice">Paste a link and caption. The app will suggest Recipe or Workout.</div>
+<button class="primary wide" id="saveInstagram">Save to my library</button>
+</div>
+<div class="panel"><h2>Saved Instagram recipes</h2><p class="muted">Your saved food ideas, ingredient notes and original Instagram links.</p><div id="igRecipes"></div></div>
+<div class="panel"><h2>Saved Instagram workouts</h2><p class="muted">Training inspiration saved separately from recipes. You can turn a saved workout into a custom plan.</p><div id="igWorkouts"></div></div>
+<div class="panel"><h2>Other saved inspiration</h2><div id="igOther"></div></div>
+<div class="panel"><h2>Build a workout from a saved post</h2><p class="muted">For a structured plan, use My plans to add training days, exercises, sets and rep ranges. Instagram saves are references; check technique, equipment and suitability before adopting a routine.</p><button class="wide" id="goMyPlans">Open my workout builder</button></div>
+</section>
 
 <section id="training" class="tab">
 <div class="panel"><h2>Four-day training log</h2><p class="muted">A sample upper/lower split. Choose weights that leave around 1–3 good reps in reserve; add reps or a small amount of weight when all sets reach the top of the range with good technique.</p>
@@ -149,6 +217,7 @@ body.theme-violet .tabs button.active,body.theme-violet .primary{background:line
 <button data-theme="arctic"><span class="swatch sw-arctic"></span><b>Arctic Night</b><small>Midnight · ice blue · frost</small></button>
 <button data-theme="emerald"><span class="swatch sw-emerald"></span><b>Emerald Forge</b><small>Black · deep green · mint</small></button>
 <button data-theme="violet"><span class="swatch sw-violet"></span><b>Violet Haze</b><small>Dark plum · ultraviolet</small></button>
+<button data-theme="abyss"><span class="swatch sw-abyss"></span><b>BLACKOUT · Abyss</b><small>True black · carbon · ice white</small></button>
 </div><p id="themeStatus" class="muted" aria-live="polite">Your selected theme is saved on this device.</p><h3>Data safety</h3><p class="muted">Your logs are stored in this browser. Export a backup before clearing browser data or changing devices.</p><button class="primary wide" id="exportData">Export my app data</button><label class="field">Import backup (JSON)<input id="importData" type="file" accept="application/json"></label><button class="wide" id="importButton">Import backup</button></div></section>
 <p class="footer">Your entries are stored locally in this browser on this device. Use Themes → Export my app data to make a backup. General fitness guidance only.</p>
 </main>
@@ -205,7 +274,7 @@ const workSel=document.getElementById('workoutTemplate');if(workSel){workSel.onc
 document.getElementById('calculateTargets').onclick=()=>{let w=+calcWeight.value,h=+calcHeight.value,a=+calcAge.value,sex=calcSex.value,act=+calcActivity.value,goal=+calcGoal.value;if(w<35||w>300||h<120||h>230||a<16||a>100){alert('Check your weight, height and age.');return}let bmr=10*w+6.25*h-5*a+(sex==='male'?5:-161),maint=bmr*act,kcal=Math.round((maint+goal)/50)*50,p=Math.round(w*2),fat=Math.round(Math.max(0.6*w,maint*.22)/5)*5,carb=Math.max(0,Math.round((kcal-p*4-fat*9)/4));document.getElementById('macroResult').innerHTML=`<b>Estimated daily targets</b><br><strong style="font-size:25px">${kcal.toLocaleString()} kcal</strong><br>Maintenance estimate: ${Math.round(maint)} kcal<br>Protein: ${p}g · Carbs: ${carb}g · Fat: ${fat}g<br><small>Formula estimate, not a measurement. Compare 7-day weight averages for 2–3 weeks before adjusting.</small>`;put('coach-targets',{kcal,p,carb,fat});};
 function renderLibrary(q=''){let el=document.getElementById('exerciseLibrary');if(!el)return;el.innerHTML=exerciseItems.filter(x=>x.join(' ').toLowerCase().includes(q.toLowerCase())).map(x=>`<div class="meal"><b>${x[0]}</b><p>${x[1]} · ${x[2]}</p><button data-addex="${x[0]}">Use in training log</button></div>`).join('')||'<p class="muted">No matching exercises.</p>';el.querySelectorAll('[data-addex]').forEach(b=>b.onclick=()=>{document.getElementById('exercise').value=b.dataset.addex;document.querySelector('[data-tab="training"]').click()})}document.getElementById('exerciseSearch').oninput=e=>renderLibrary(e.target.value);renderLibrary();
 function renderRecords(){let logs=get('coach-lifts',[]),best={};logs.forEach(x=>{let k=x.exercise.trim().toLowerCase();if(!best[k]||x.weight>best[k].weight)best[k]=x});document.getElementById('prBoard').innerHTML=Object.values(best).sort((a,b)=>b.weight-a.weight).map(x=>`<div class="logitem row"><b>${x.exercise}</b><span>${x.weight}kg</span></div>`).join('')||'<p class="muted">Log lifts in Training to build your personal records.</p>';let a=get('coach-weights',[]).sort((x,y)=>x.date.localeCompare(y.date)),c=document.getElementById('weightChart'),ctx=c.getContext('2d');ctx.clearRect(0,0,c.width,c.height);ctx.strokeStyle='#6e8ba8';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(35,15);ctx.lineTo(35,190);ctx.lineTo(620,190);ctx.stroke();if(a.length){let vals=a.map(x=>x.kg),lo=Math.min(...vals)-1,hi=Math.max(...vals)+1;ctx.strokeStyle='#55e6d0';ctx.lineWidth=3;ctx.beginPath();a.forEach((x,i)=>{let px=40+(a.length===1?0:i*570/(a.length-1)),py=180-(x.kg-lo)/(hi-lo||1)*145;i?ctx.lineTo(px,py):ctx.moveTo(px,py)});ctx.stroke();a.forEach((x,i)=>{let px=40+(a.length===1?0:i*570/(a.length-1)),py=180-(x.kg-lo)/(hi-lo||1)*145;ctx.fillStyle='#8c7bff';ctx.beginPath();ctx.arc(px,py,4,0,Math.PI*2);ctx.fill()})}else{ctx.fillStyle='#a6b8cd';ctx.font='14px sans-serif';ctx.fillText('Add weigh-ins in Progress to see your trend',55,100)}}
-function setTheme(t){const themes=['midnight','stealth','cyberpunk','bloodmoon','arctic','emerald','violet'];document.body.classList.remove(...themes.map(x=>'theme-'+x));if(t!=='glass')document.body.classList.add('theme-'+t);put('coach-theme',t);document.querySelectorAll('[data-theme]').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.theme===t));});const status=document.getElementById('themeStatus');if(status)status.textContent='Active theme: '+({glass:'Smoked Glass',midnight:'Midnight Blue',stealth:'Stealth Black',cyberpunk:'Cyberpunk',bloodmoon:'Blood Moon',arctic:'Arctic Night',emerald:'Emerald Forge',violet:'Violet Haze'}[t]||t)+'. Saved on this device.';}document.querySelectorAll('[data-theme]').forEach(b=>b.onclick=()=>setTheme(b.dataset.theme));setTheme(get('coach-theme','glass'));
+function setTheme(t){const themes=['midnight','stealth','cyberpunk','bloodmoon','arctic','emerald','violet','abyss'];document.body.classList.remove(...themes.map(x=>'theme-'+x));if(t!=='glass')document.body.classList.add('theme-'+t);put('coach-theme',t);document.querySelectorAll('[data-theme]').forEach(b=>{b.setAttribute('aria-pressed',String(b.dataset.theme===t));});const status=document.getElementById('themeStatus');if(status)status.textContent='Active theme: '+({glass:'Smoked Glass',midnight:'Midnight Blue',stealth:'Stealth Black',cyberpunk:'Cyberpunk',bloodmoon:'Blood Moon',arctic:'Arctic Night',emerald:'Emerald Forge',violet:'Violet Haze',abyss:'BLACKOUT · Abyss'}[t]||t)+'. Saved on this device.';}document.querySelectorAll('[data-theme]').forEach(b=>b.onclick=()=>setTheme(b.dataset.theme));setTheme(get('coach-theme','glass'));
 document.getElementById('exportData').onclick=()=>{let o={};for(let i=0;i<localStorage.length;i++){let k=localStorage.key(i);if(k.startsWith('coach-'))o[k]=localStorage.getItem(k)}let blob=new Blob([JSON.stringify(o,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='winter-bulk-coach-backup.json';a.click();URL.revokeObjectURL(a.href)};
 document.getElementById('importButton').onclick=()=>{let f=document.getElementById('importData').files[0];if(!f){alert('Choose a backup JSON file first.');return}let r=new FileReader();r.onload=()=>{try{let o=JSON.parse(r.result);Object.entries(o).forEach(([k,v])=>{if(k.startsWith('coach-'))localStorage.setItem(k,v)});alert('Backup imported. Reloading the app.');location.reload()}catch(e){alert('That backup file could not be read.')}};r.readAsText(f)};
 const oldRenderProgress=renderProgress;renderProgress=function(){oldRenderProgress();renderRecords()};const oldRenderWorkouts=renderWorkouts;renderWorkouts=function(){oldRenderWorkouts();renderRecords()};renderRecords();
@@ -223,6 +292,54 @@ function renderDraft(){const el=document.getElementById('planDraft');if(!el)retu
 document.getElementById('addPlanExercise')?.addEventListener('click',()=>{let day=document.getElementById('newDayName').value.trim(),exercise=document.getElementById('newDayExercise').value.trim(),sets=+document.getElementById('newDaySets').value,reps=document.getElementById('newDayReps').value.trim();if(!day||!exercise||sets<1||!reps){alert('Enter a day name, exercise, sets and rep range.');return}let d=draftDays.find(x=>x.name===day);if(!d){d={name:day,exercises:[]};draftDays.push(d)}d.exercises.push({exercise,sets,reps});document.getElementById('newDayExercise').value='';document.getElementById('newDayReps').value='';renderDraft();});
 function renderSavedPlans(){let el=document.getElementById('savedPlans');if(!el)return;let plans=get('coach-custom-plans',[]);el.innerHTML=plans.length?plans.map((p,i)=>`<div class="custom-day"><div class="row"><b>${p.name}</b><button data-delplan="${i}">Delete</button></div><p class="muted">${p.daysPerWeek} days/week · ${p.goal}</p>${p.days.map(d=>`<p><b>${d.name}</b><br>${d.exercises.map(x=>`${x.exercise} (${x.sets}×${x.reps})`).join(' · ')}</p>`).join('')}</div>`).join(''):'<p class="muted">Your custom plans will appear here.</p>';el.querySelectorAll('[data-delplan]').forEach(b=>b.onclick=()=>{let a=get('coach-custom-plans',[]);a.splice(+b.dataset.delplan,1);put('coach-custom-plans',a);renderSavedPlans()});}
 document.getElementById('saveCustomPlan')?.addEventListener('click',()=>{let name=document.getElementById('newPlanName').value.trim();if(!name||!draftDays.length){alert('Give your plan a name and add at least one exercise.');return}let a=get('coach-custom-plans',[]);a.push({name,daysPerWeek:+document.getElementById('newPlanDays').value,goal:document.getElementById('newPlanGoal').value,days:draftDays.map(d=>({name:d.name,exercises:d.exercises.map(x=>({...x}))})),created:new Date().toISOString()});put('coach-custom-plans',a);draftDays=[];document.getElementById('newPlanName').value='';renderDraft();renderSavedPlans();alert('Your workout plan has been saved on this device.');});
+
+// Bottom navigation mirrors the existing tabs; original tab navigation remains available.
+document.querySelectorAll('[data-bottom]').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.bottom;document.querySelector(`[data-tab="${id}"]`)?.click();document.querySelectorAll('[data-bottom]').forEach(x=>x.classList.toggle('active',x===b));window.scrollTo({top:0,behavior:'smooth'});}));
+document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-bottom]').forEach(x=>x.classList.toggle('active',x.dataset.bottom===b.dataset.tab));}));
 renderWinterPlan();renderDraft();renderSavedPlans();
+
+
+// Instagram inspiration saver: deliberately stores user-supplied text + source URL locally.
+const igKeys={recipe:'coach-ig-recipes',workout:'coach-ig-workouts',reference:'coach-ig-reference'};
+function detectIgType(text){const t=(text||'').toLowerCase();const food=/\b(recipe|ingredients|grams|g\s|ml\b|tbsp|tsp|cook|bake|oven|air fryer|calories|kcal|protein|chicken|rice|pasta|beef|salmon|meal prep|servings)\b/.test(t);const gym=/\b(workout|sets|reps|rep|training|push day|pull day|leg day|chest day|back day|squat|deadlift|bench press|lat pulldown|dumbbell|barbell|cable|hypertrophy|exercise)\b/.test(t);if(food&&gym)return 'reference';if(food)return 'recipe';if(gym)return 'workout';return 'reference';}
+function safeText(v){return String(v||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function validInstagramUrl(u){try{let x=new URL(u);return ['instagram.com','www.instagram.com','m.instagram.com'].includes(x.hostname)&&/^\/(p|reel|reels|tv)\//.test(x.pathname)}catch{return false}}
+function igItems(type){return get(igKeys[type],[])}
+function renderIgSaves(){for(const [type,id] of [['recipe','igRecipes'],['workout','igWorkouts'],['reference','igOther']]){const el=$(id);if(!el)continue;const items=igItems(type);el.innerHTML=items.length?items.slice().reverse().map((x,ri)=>{const i=items.length-1-ri;return `<article class="saved-card"><span class="tag">${type==='recipe'?'RECIPE':type==='workout'?'WORKOUT':'INSPIRATION'}</span><h3>${safeText(x.title)}</h3><p>${safeText(x.text)}</p>${x.url?`<a href="${safeText(x.url)}" target="_blank" rel="noopener">Open original Instagram post ↗</a>`:''}<div class="actions"><button data-ig-delete="${type}:${i}">Delete</button>${type==='workout'?`<button data-ig-plan="${type}:${i}" class="primary">Add to My Plans</button>`:''}</div></article>`}).join(''):'<p class="muted">Nothing saved here yet.</p>'}}
+function updateIgGuess(){const text=$('igText')?.value||'';const chosen=$('igType')?.value||'auto';const guess=chosen==='auto'?detectIgType(text):chosen;const label={recipe:'Recipe',workout:'Workout',reference:'Other inspiration'}[guess];if($('igGuess'))$('igGuess').textContent='Suggested category: '+label+(chosen==='auto'?' (based on the caption; you can change it).':'.');}
+$('igText')?.addEventListener('input',updateIgGuess);$('igType')?.addEventListener('change',updateIgGuess);
+$('saveInstagram')?.addEventListener('click',()=>{const url=$('igUrl').value.trim(),text=$('igText').value.trim();if(!validInstagramUrl(url)){alert('Paste a valid Instagram post, Reel or video URL.');return}if(!text){alert('Paste the caption or add notes so you can recognise this save later.');return}const chosen=$('igType').value,type=chosen==='auto'?detectIgType(text):chosen;const title=$('igTitle').value.trim()||(text.split(/\n|[.!?]/).map(x=>x.trim()).find(Boolean)||({recipe:'Saved recipe',workout:'Saved workout',reference:'Instagram inspiration'}[type])).slice(0,90);const list=igItems(type);list.push({id:Date.now(),title,text,url,created:new Date().toISOString()});put(igKeys[type],list);$('igUrl').value='';$('igText').value='';$('igTitle').value='';$('igType').value='auto';updateIgGuess();renderIgSaves();alert('Saved under '+({recipe:'Recipes',workout:'Workouts',reference:'Other inspiration'}[type])+'.');});
+document.addEventListener('click',e=>{const del=e.target.closest('[data-ig-delete]');if(del){const [type,index]=del.dataset.igDelete.split(':');const a=igItems(type);a.splice(+index,1);put(igKeys[type],a);renderIgSaves();}const plan=e.target.closest('[data-ig-plan]');if(plan){const [type,index]=plan.dataset.igPlan.split(':');const item=igItems(type)[+index];if(!item)return;const lines=item.text.split(/\n/).map(x=>x.trim()).filter(Boolean).slice(0,20);const exercises=lines.map(line=>{const m=line.match(/^(.+?)(?:\s+[-–:]?\s*(\d+)\s*[x×]\s*(\d+(?:\s*[-–]\s*\d+)?))?$/i);return {exercise:(m?.[1]||line).replace(/^[-•*\d.)\s]+/, '').slice(0,100),sets:m?.[2]?+m[2]:3,reps:m?.[3]||'8–12'}}).filter(x=>x.exercise);let plans=get('coach-custom-plans',[]);plans.push({name:item.title,daysPerWeek:1,goal:'Muscle growth',sourceUrl:item.url,days:[{name:'Imported from Instagram — review before use',exercises}],created:new Date().toISOString()});put('coach-custom-plans',plans);renderSavedPlans();document.querySelector('[data-tab="myplans"]')?.click();alert('Added as a draft-style custom plan. Review the exercises, sets and reps before training.');}});
+$('goMyPlans')?.addEventListener('click',()=>document.querySelector('[data-tab="myplans"]')?.click());
+renderIgSaves();updateIgGuess();
+
+// Android/Chrome Web Share Target: accept Instagram links shared directly from the system share sheet.
+(function handleIncomingShare(){
+  const params=new URLSearchParams(location.search);
+  const sharedTitle=(params.get('title')||'').trim();
+  const sharedText=(params.get('text')||'').trim();
+  const sharedUrl=(params.get('url')||'').trim();
+  if(!sharedTitle&&!sharedText&&!sharedUrl)return;
+  const combined=[sharedText,sharedUrl].filter(Boolean).join('\n').trim();
+  const match=combined.match(/https?:\/\/(?:www\.|m\.)?instagram\.com\/(?:p|reel|reels|tv)\/[^\s?]+(?:\?[^\s]*)?/i);
+  const url=sharedUrl.startsWith('http')?sharedUrl:(match?match[0].replace(/[),.]+$/,''):'');
+  const text=sharedText.replace(/https?:\/\/(?:www\.|m\.)?instagram\.com\/(?:p|reel|reels|tv)\/[^\s]+/ig,'').trim();
+  const valid=url && validInstagramUrl(url);
+  const stamp=[sharedTitle,sharedText,sharedUrl].join('|');
+  const already=sessionStorage.getItem('coach-last-share')===stamp;
+  if(valid&&!already){
+    const type=detectIgType(text);
+    const title=(sharedTitle||text.split(/\n|[.!?]/).map(x=>x.trim()).find(Boolean)|| (type==='recipe'?'Instagram recipe':type==='workout'?'Instagram workout':'Instagram save')).slice(0,90);
+    const note=text||'Shared directly from Instagram. The post link is saved; add ingredients or exercise details when you have them.';
+    const list=igItems(type);list.push({id:Date.now(),title,text:note,url,created:new Date().toISOString(),sharedDirectly:true});put(igKeys[type],list);
+    sessionStorage.setItem('coach-last-share',stamp);
+    renderIgSaves();
+    const banner=document.createElement('div');banner.className='notice';banner.innerHTML='<b>Instagram link received.</b> Saved to '+(type==='recipe'?'Recipe Vault':type==='workout'?'Workout Vault':'Inspiration')+'. '+(text?'Check the category and details in Instagram saves.':'Instagram shared the link only; add the recipe or exercise details when available.');
+    const target=document.getElementById('social');if(target)target.prepend(banner);
+    document.querySelector('[data-tab="social"]')?.click();
+  }
+  // Remove share parameters so a refresh does not re-process the same share.
+  history.replaceState({},document.title,location.pathname+location.hash);
+})();
 
 </script></body></html>
