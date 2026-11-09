@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#153a2a">
+<meta name="theme-color" content="#070b14">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-192.png"><title>Winter Bulk Coach</title>
 <style>
@@ -9,11 +9,24 @@
 </style>
 <style>
 :root{--bg:#08121f;--surface:rgba(20,34,54,.78);--surface2:rgba(30,49,73,.8);--ink:#edf5ff;--muted:#a6b8cd;--line:rgba(160,195,230,.2);--accent:#55e6d0;--accent2:#8c7bff;color-scheme:dark}body{background:radial-gradient(ellipse at 15% 0%,#1a4560 0,transparent 38%),radial-gradient(ellipse at 90% 15%,#31275f 0,transparent 32%),var(--bg);color:var(--ink)}header{background:linear-gradient(125deg,rgba(17,42,65,.96),rgba(44,37,88,.9));border:1px solid var(--line);backdrop-filter:blur(18px);box-shadow:0 14px 45px #0005}header p,.muted,.stat small{color:var(--muted)}.tabs{background:rgba(8,18,31,.88);backdrop-filter:blur(14px)}.tabs button,button,.field input,.field select{background:var(--surface2);border-color:var(--line);color:var(--ink)}.tabs button.active,.primary{background:linear-gradient(120deg,var(--accent),var(--accent2));color:#06131e;border-color:transparent}.panel,.stat{background:var(--surface);border:1px solid var(--line);box-shadow:0 12px 32px #0003;backdrop-filter:blur(16px)}.stat b,h3,.section{color:var(--accent)}.pill,.notice{background:rgba(85,230,208,.12);color:var(--ink)}.bar{background:#263b52}.fill{background:linear-gradient(90deg,var(--accent),var(--accent2))}.meal,.logitem,.check{border-color:var(--line)}.recipe{background:var(--surface2);color:var(--ink)}.footer{color:var(--muted)}body.theme-midnight{--accent:#66b8ff;--accent2:#4777ff}body.theme-emerald{--accent:#65e6a4;--accent2:#18a878}body.theme-violet{--accent:#c3a1ff;--accent2:#7864f4}@media(min-width:700px){.wrap{max-width:900px}.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* Winter Edition: deeper smoked-glass finish */
+:root{--bg:#050811;--surface:rgba(10,17,31,.88);--surface2:rgba(17,27,46,.92);--ink:#f2f6ff;--muted:#91a1ba;--line:rgba(143,174,220,.16);--accent:#69e7dc;--accent2:#9275ff;color-scheme:dark}
+body{background:radial-gradient(ellipse at 12% -5%,rgba(27,74,103,.28),transparent 42%),radial-gradient(ellipse at 95% 12%,rgba(74,44,125,.2),transparent 35%),#050811}
+header{background:linear-gradient(125deg,rgba(7,15,28,.98),rgba(26,23,52,.94));border:1px solid rgba(130,165,220,.19);box-shadow:0 18px 55px rgba(0,0,0,.55)}
+.panel,.stat{background:linear-gradient(145deg,rgba(16,27,45,.91),rgba(8,14,26,.9));border:1px solid rgba(143,174,220,.17);box-shadow:0 16px 38px rgba(0,0,0,.36),inset 0 1px rgba(255,255,255,.025);backdrop-filter:blur(18px)}
+.tabs{background:rgba(5,8,17,.94)}.tabs button{background:rgba(18,28,46,.9)}.tabs button.active,.primary{background:linear-gradient(120deg,#55dacc,#8d70f6);color:#06101a;box-shadow:0 5px 20px rgba(95,190,220,.15)}
+.field input,.field select{background:rgba(5,11,22,.92)}.recipe{background:rgba(19,31,51,.92)}
+.hero-art{width:100%;display:block;border-radius:16px;border:1px solid var(--line);margin:10px 0 14px;box-shadow:0 15px 40px #0007}
+.exercise-card{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.exercise-card:last-child{border:0}.exercise-card small{display:block;color:var(--muted);font-size:11px;margin-top:3px}
+.custom-day{background:rgba(3,9,19,.35);border:1px solid var(--line);border-radius:13px;padding:12px;margin:10px 0}
+@media(min-width:700px){.hero-art{max-height:430px;object-fit:cover}}
 </style>
 </head><body>
 <header><h1>💪 Winter Bulk Coach</h1><p>Food · recipes · training · recovery · progress</p></header>
 <main class="wrap">
-<nav class="tabs"><button class="active" data-tab="today">Today</button><button data-tab="recipes">Recipes</button><button data-tab="training">Training</button><button data-tab="shop">Shopping</button><button data-tab="progress">Progress</button><button data-tab="guide">Bulk guide</button><button data-tab="planner">Plans</button><button data-tab="calculator">Calculator</button><button data-tab="library">Exercise library</button><button data-tab="records">Records</button><button data-tab="settings">Themes</button></nav>
+<nav class="tabs"><button class="active" data-tab="today">Today</button><button data-tab="recipes">Recipes</button><button data-tab="training">Training</button><button data-tab="myplans">My plans</button><button data-tab="shop">Shopping</button><button data-tab="progress">Progress</button><button data-tab="guide">Bulk guide</button><button data-tab="planner">Plans</button><button data-tab="calculator">Calculator</button><button data-tab="library">Exercise library</button><button data-tab="records">Records</button><button data-tab="settings">Themes</button></nav>
 
 <section id="today" class="tab active">
 <div class="stats">
@@ -33,6 +46,26 @@
 <h3>Log a lift</h3><div class="grid2"><label class="field">Exercise<input id="exercise" placeholder="e.g. Bench press"></label><label class="field">Weight (kg)<input id="liftWeight" type="number" min="0" step="0.5" placeholder="80"></label><label class="field">Sets × reps<input id="setsReps" placeholder="3 × 8"></label><label class="field">Date<input id="liftDate" type="date"></label></div><button class="primary wide" id="saveLift">Save training entry</button><div id="liftLog"></div></div>
 </section>
 
+
+<section id="myplans" class="tab">
+ <div class="panel">
+  <h2>Winter hypertrophy · 4-day plan</h2>
+  <p class="muted">A balanced upper/lower programme designed around progressive overload, twice-weekly muscle exposure and recoverable volume. Start with 1–3 reps in reserve on working sets.</p>
+  <img class="hero-art" src="winter-bulk-visual.png" alt="Winter Bulk Coach workout and app visual guide">
+  <div class="notice"><b>Weekly structure</b><br>Monday: Upper A · Tuesday: Lower A · Thursday: Upper B · Saturday: Lower B<br>Move days to suit your work and recovery; keep at least one rest day after two consecutive sessions.</div>
+  <div id="winterPlan"></div>
+ </div>
+ <div class="panel">
+  <h2>Create your own workout plan</h2><p class="muted">Build and save your own split. Plans are stored on this device and remain separate from your existing workout history.</p>
+  <label class="field">Plan name<input id="newPlanName" placeholder="e.g. My 5-day hypertrophy plan"></label>
+  <div class="grid2"><label class="field">Training days per week<select id="newPlanDays"><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option></select></label><label class="field">Goal<select id="newPlanGoal"><option>Muscle growth</option><option>Strength</option><option>General fitness</option><option>Recomposition</option></select></label></div>
+  <h3>Add a training day</h3>
+  <div class="grid2"><label class="field">Day name<input id="newDayName" placeholder="e.g. Chest & triceps"></label><label class="field">Exercise<input id="newDayExercise" placeholder="e.g. Incline DB press"></label><label class="field">Sets<input id="newDaySets" type="number" min="1" max="10" value="3"></label><label class="field">Rep range<input id="newDayReps" placeholder="8–12"></label></div>
+  <button class="wide" id="addPlanExercise">Add exercise to day</button><div id="planDraft" class="notice" style="margin-top:10px">No exercises added yet.</div>
+  <button class="primary wide" id="saveCustomPlan">Save my workout plan</button>
+ </div>
+ <div class="panel"><h2>My saved workout plans</h2><div id="savedPlans"></div></div>
+</section>
 <section id="shop" class="tab"><div class="panel"><div class="row"><h2>Weekly Aldi / Lidl list</h2><span class="pill" id="shopCount">0 checked</span></div><p class="muted">Indicative list for one person. Estimate £75–£90 depending on offers and pantry stock; whey excluded.</p><div id="shopping"></div><button class="wide" id="clearShop">Reset shopping list</button></div></section>
 
 <section id="progress" class="tab">
@@ -114,4 +147,20 @@ function setTheme(t){document.body.classList.remove('theme-midnight','theme-emer
 document.getElementById('exportData').onclick=()=>{let o={};for(let i=0;i<localStorage.length;i++){let k=localStorage.key(i);if(k.startsWith('coach-'))o[k]=localStorage.getItem(k)}let blob=new Blob([JSON.stringify(o,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='winter-bulk-coach-backup.json';a.click();URL.revokeObjectURL(a.href)};
 document.getElementById('importButton').onclick=()=>{let f=document.getElementById('importData').files[0];if(!f){alert('Choose a backup JSON file first.');return}let r=new FileReader();r.onload=()=>{try{let o=JSON.parse(r.result);Object.entries(o).forEach(([k,v])=>{if(k.startsWith('coach-'))localStorage.setItem(k,v)});alert('Backup imported. Reloading the app.');location.reload()}catch(e){alert('That backup file could not be read.')}};r.readAsText(f)};
 const oldRenderProgress=renderProgress;renderProgress=function(){oldRenderProgress();renderRecords()};const oldRenderWorkouts=renderWorkouts;renderWorkouts=function(){oldRenderWorkouts();renderRecords()};renderRecords();
+
+// Winter hypertrophy plan + user-created workout builder. Uses separate keys to preserve existing data.
+const winterDays=[
+ {day:'Upper A · Chest / Back focus',focus:'Chest, lats, upper back, delts, arms',items:[['Barbell bench press','3 × 6–8','Rest 2–3 min'],['Chest-supported row','3 × 8–10','Rest 2 min'],['Incline dumbbell press','3 × 8–12','Rest 90–120 sec'],['Neutral-grip lat pulldown','3 × 8–12','Rest 90–120 sec'],['Cable lateral raise','3 × 12–20','Rest 60–90 sec'],['Cable triceps pressdown','2 × 10–15','Rest 60–90 sec'],['Dumbbell curl','2 × 10–15','Rest 60–90 sec']]},
+ {day:'Lower A · Quad focus',focus:'Quads, hamstrings, glutes, calves',items:[['Hack squat or controlled leg press','3 × 6–10','Rest 2–3 min'],['Romanian deadlift','3 × 8–10','Rest 2–3 min'],['Leg extension','2 × 10–15','Rest 60–90 sec'],['Seated leg curl','3 × 10–15','Rest 60–90 sec'],['Standing calf raise','3 × 8–15','Rest 60–90 sec'],['Cable crunch','2 × 10–15','Rest 60 sec']]},
+ {day:'Upper B · Back / Shoulders focus',focus:'Back thickness, shoulders, chest, arms',items:[['Pull-up or assisted pull-up','3 × 6–10','Rest 2 min'],['Seated dumbbell shoulder press','3 × 8–10','Rest 2 min'],['Machine chest press','3 × 8–12','Rest 90–120 sec'],['Seated cable row','3 × 8–12','Rest 90–120 sec'],['Reverse pec deck','3 × 12–20','Rest 60–90 sec'],['Incline dumbbell curl','2 × 10–15','Rest 60 sec'],['Overhead cable triceps extension','2 × 10–15','Rest 60 sec']]},
+ {day:'Lower B · Posterior chain focus',focus:'Hamstrings, glutes, quads, calves',items:[['Smith squat or front squat','3 × 6–10','Rest 2–3 min'],['Hip thrust','3 × 8–12','Rest 2 min'],['Lying leg curl','3 × 10–15','Rest 60–90 sec'],['Leg press (comfortable stance)','2 × 10–15','Rest 2 min'],['Seated calf raise','3 × 10–15','Rest 60–90 sec'],['Hanging knee raise','2 × 10–15','Rest 60 sec']]}
+];
+function renderWinterPlan(){const el=document.getElementById('winterPlan');if(!el)return;el.innerHTML=winterDays.map((d,i)=>`<div class="custom-day"><div class="row"><b>${d.day}</b><span class="pill">Day ${i+1}</span></div><p class="muted">${d.focus}</p>${d.items.map(x=>`<div class="exercise-card"><div><b>${x[0]}</b><small>${x[2]}</small></div><span class="pill">${x[1]}</span></div>`).join('')}</div>`).join('')+`<div class="notice"><b>Progression:</b> use a load that leaves 1–3 reps in reserve. When every set reaches the top of its rep range with clean technique, increase the load by the smallest available increment. If performance or recovery falls for several sessions, reduce sets temporarily.</div><p class="muted">Warm up with 5–8 minutes of easy movement and 2–4 progressively heavier warm-up sets for the first compound lift. Do not take every set to failure. Substitute any movement that causes pain; seek qualified coaching for technique if unsure.</p>`;}
+let draftDays=[];
+function renderDraft(){const el=document.getElementById('planDraft');if(!el)return;el.innerHTML=draftDays.length?draftDays.map(d=>`<div class="custom-day"><b>${d.name}</b>${d.exercises.map(x=>`<div class="logitem">${x.exercise} · ${x.sets} sets × ${x.reps} reps</div>`).join('')}</div>`).join(''):'No exercises added yet.';}
+document.getElementById('addPlanExercise')?.addEventListener('click',()=>{let day=document.getElementById('newDayName').value.trim(),exercise=document.getElementById('newDayExercise').value.trim(),sets=+document.getElementById('newDaySets').value,reps=document.getElementById('newDayReps').value.trim();if(!day||!exercise||sets<1||!reps){alert('Enter a day name, exercise, sets and rep range.');return}let d=draftDays.find(x=>x.name===day);if(!d){d={name:day,exercises:[]};draftDays.push(d)}d.exercises.push({exercise,sets,reps});document.getElementById('newDayExercise').value='';document.getElementById('newDayReps').value='';renderDraft();});
+function renderSavedPlans(){let el=document.getElementById('savedPlans');if(!el)return;let plans=get('coach-custom-plans',[]);el.innerHTML=plans.length?plans.map((p,i)=>`<div class="custom-day"><div class="row"><b>${p.name}</b><button data-delplan="${i}">Delete</button></div><p class="muted">${p.daysPerWeek} days/week · ${p.goal}</p>${p.days.map(d=>`<p><b>${d.name}</b><br>${d.exercises.map(x=>`${x.exercise} (${x.sets}×${x.reps})`).join(' · ')}</p>`).join('')}</div>`).join(''):'<p class="muted">Your custom plans will appear here.</p>';el.querySelectorAll('[data-delplan]').forEach(b=>b.onclick=()=>{let a=get('coach-custom-plans',[]);a.splice(+b.dataset.delplan,1);put('coach-custom-plans',a);renderSavedPlans()});}
+document.getElementById('saveCustomPlan')?.addEventListener('click',()=>{let name=document.getElementById('newPlanName').value.trim();if(!name||!draftDays.length){alert('Give your plan a name and add at least one exercise.');return}let a=get('coach-custom-plans',[]);a.push({name,daysPerWeek:+document.getElementById('newPlanDays').value,goal:document.getElementById('newPlanGoal').value,days:draftDays.map(d=>({name:d.name,exercises:d.exercises.map(x=>({...x}))})),created:new Date().toISOString()});put('coach-custom-plans',a);draftDays=[];document.getElementById('newPlanName').value='';renderDraft();renderSavedPlans();alert('Your workout plan has been saved on this device.');});
+renderWinterPlan();renderDraft();renderSavedPlans();
+
 </script></body></html>
