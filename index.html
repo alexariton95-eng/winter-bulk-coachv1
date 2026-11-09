@@ -211,51 +211,113 @@ table{border-color:#ffffff20!important}td,th{border-color:#ffffff18!important}
 @media(max-width:390px){.app-header h1{font-size:34px!important}.screen-intro h2{font-size:35px!important}.today-strip strong{font-size:16px}.photo-tile{height:125px}}
 </style>
 
-<style id="winter-v7-layout">
-/* V7: a real structural redesign, not another colour-only theme */
-:root{--v7-bg:#080d13;--v7-panel:#111a22;--v7-line:rgba(190,210,220,.12);--v7-lime:#d8ff52;--v7-cyan:#70e2d2}
-html,body{min-height:100%;background:#080d13!important}
-body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif!important}
-.v7-sidebar{display:none}
-@media(min-width:900px){
- body{padding-left:258px!important}
- .v7-sidebar{display:flex;position:fixed;z-index:80;inset:0 auto 0 0;width:258px;padding:24px 16px 18px;flex-direction:column;background:#090e13;border-right:1px solid var(--v7-line);box-shadow:12px 0 40px #0004}
- .v7-brand{display:flex;align-items:center;gap:11px;padding:4px 8px 26px;border-bottom:1px solid var(--v7-line)}
- .v7-brand-mark{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:var(--v7-lime);color:#10150b;font-weight:950;letter-spacing:-.08em}
- .v7-brand b{display:block;font-size:14px;letter-spacing:-.04em;color:#f4f7f2}.v7-brand small{display:block;font-size:9px;color:#82908c;letter-spacing:.15em;margin-top:4px}
- .v7-nav-label{font-size:9px;letter-spacing:.18em;color:#65736f;padding:22px 10px 8px}.v7-nav{display:grid;gap:5px}
- .v7-nav button{display:flex!important;align-items:center;gap:12px;text-align:left!important;width:100%;padding:12px 13px!important;border:1px solid transparent!important;border-radius:12px!important;background:transparent!important;color:#9ba8a3!important;box-shadow:none!important;font-size:12px!important}
- .v7-nav button .v7-icon{width:22px;text-align:center;font-size:16px;color:#8b9b94}.v7-nav button.active{background:#d8ff5212!important;border-color:#d8ff5226!important;color:#eff7dc!important}.v7-nav button.active .v7-icon{color:var(--v7-lime)}
- .v7-side-foot{margin-top:auto;padding:14px 10px;border-top:1px solid var(--v7-line);font-size:10px;line-height:1.6;color:#68766f}
- header.app-header{margin:0!important;padding:17px 34px!important;height:112px;border-radius:0!important;border:0!important;border-bottom:1px solid var(--v7-line)!important;background:#0a1017!important;box-shadow:none!important;display:flex;align-items:center;justify-content:space-between;position:relative}
- .app-header .brandline{display:none!important}.app-header .header-title-row{width:100%;display:flex;align-items:center;justify-content:space-between}
- .app-header .header-title-row>div:first-child{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.app-header .eyebrow{font-size:9px!important;letter-spacing:.16em!important;color:#a7b39e!important}
- .app-header h1{font-size:22px!important;line-height:1!important;margin:0!important;letter-spacing:-.06em!important}.app-header h1 span{color:var(--v7-lime)!important}.app-header p{font-size:11px!important;margin:0!important;color:#87958f!important}.app-header .header-orbit{width:56px!important;height:56px!important}
- main.wrap{max-width:none!important;margin:0!important;padding:30px 36px 70px!important}.tabs{display:none!important}.bottom-nav{display:none!important}
- .tab.active{max-width:1480px;margin:0 auto}.screen-intro{padding:26px 0 20px!important;margin-bottom:10px!important}.screen-intro h2{font-size:clamp(38px,4vw,58px)!important;line-height:.98!important;letter-spacing:-.07em!important}.screen-intro p{max-width:560px;font-size:14px!important}
- #today .command-hero{min-height:330px!important;display:grid!important;grid-template-columns:1.1fr .9fr!important;align-items:center!important;padding:38px!important;border-radius:26px!important}
- #today .command-hero h2{font-size:clamp(42px,5vw,68px)!important;line-height:.96!important;letter-spacing:-.075em!important}#today .hero-visual img{max-height:290px!important;object-fit:contain!important}
- #today .stats{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important}#today .stat{padding:20px!important;min-height:125px}#today .stat b{font-size:32px!important}
- #today .today-strip{padding:22px 26px!important;border-radius:20px!important}#today .shortcut-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}#today .shortcut-card{min-height:145px!important}
- .panel{padding:22px!important;border-radius:20px!important;margin:14px 0!important}.grid2{gap:14px!important}.photo-grid,.movement-gallery{gap:14px!important}.photo-tile{height:210px!important}
+
+<style id="winter-v8-structural-redesign">
+:root{--v8-bg:#090d11;--v8-panel:#121a20;--v8-panel2:#172129;--v8-line:rgba(222,238,226,.11);--v8-text:#f1f4ee;--v8-muted:#9ca9a1;--v8-accent:#d8ff52;--v8-teal:#78e1cf}
+html,body{background:var(--v8-bg)!important;color:var(--v8-text)!important;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif!important}
+body{min-height:100vh!important}
+.v8-sidebar{display:none}
+header.app-header{position:relative!important;border:0!important;border-bottom:1px solid var(--v8-line)!important;border-radius:0!important;background:#0b1116!important;box-shadow:none!important;padding:18px 22px!important;color:var(--v8-text)!important}
+header.app-header .brandline{display:flex!important;align-items:center;margin:0 0 13px!important}
+header.app-header .brand-mark{background:var(--v8-accent)!important;color:#10150b!important;border-radius:11px!important;font-weight:950!important}
+header.app-header .brand-kicker{color:#8b9a90!important;letter-spacing:.17em!important}
+header.app-header .header-menu{margin-left:auto}
+header.app-header .header-title-row{display:flex;align-items:center;justify-content:space-between;gap:20px}
+header.app-header h1{font-size:clamp(30px,4vw,43px)!important;line-height:.98!important;letter-spacing:-.075em!important;color:#f2f5ee!important}
+header.app-header h1 span{color:var(--v8-accent)!important}
+header.app-header p{color:var(--v8-muted)!important}
+header.app-header .header-orbit{border-color:#d8ff5244!important;color:var(--v8-accent)!important}
+main.wrap{max-width:1500px!important;padding:24px clamp(16px,3vw,42px) 100px!important;margin:0 auto!important}
+.tabs{display:flex!important;position:relative!important;top:auto!important;overflow-x:auto!important;background:transparent!important;border-bottom:1px solid var(--v8-line)!important;padding:0 0 12px!important;gap:6px!important;margin-bottom:24px!important;scrollbar-width:thin}
+.tabs button{white-space:nowrap!important;background:#141d24!important;border:1px solid var(--v8-line)!important;border-radius:10px!important;color:#aab6ae!important;padding:10px 13px!important;font-size:11px!important}
+.tabs button.active{background:var(--v8-accent)!important;color:#11170b!important;border-color:var(--v8-accent)!important;font-weight:800!important}
+.bottom-nav{display:none!important}
+.tab{max-width:none!important}
+.tab.active{display:block!important}
+.screen-intro{position:relative!important;overflow:hidden!important;padding:24px 0 28px!important;margin:0 0 18px!important;border:0!important;background:transparent!important}
+.screen-intro:after{content:"";position:absolute;right:3%;top:12%;width:180px;height:180px;border-radius:50%;border:1px solid #d8ff521b;box-shadow:0 0 0 22px #d8ff5208,0 0 0 48px #d8ff5205;pointer-events:none}
+.screen-intro .eyebrow{display:inline-block!important;color:var(--v8-accent)!important;font-size:9px!important;letter-spacing:.19em!important;font-weight:850!important;margin-bottom:12px!important}
+.screen-intro h2{font-size:clamp(36px,5vw,64px)!important;line-height:.94!important;letter-spacing:-.075em!important;max-width:760px!important;margin:0 0 12px!important;color:#f3f6f0!important}
+.screen-intro h2 em{color:var(--v8-accent)!important;font-style:normal!important}
+.screen-intro p{font-size:13px!important;color:var(--v8-muted)!important;max-width:600px!important;line-height:1.6!important}
+.v8-page-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important;align-items:start!important}
+.v8-page-grid>.panel,.v8-page-grid>.progress-intro{margin:0!important;min-width:0!important;grid-column:auto}
+.v8-page-grid>.panel:first-child:nth-last-child(1){grid-column:1/-1}
+.panel,.stat{background:linear-gradient(145deg,#151f26,#10171d)!important;border:1px solid var(--v8-line)!important;border-radius:18px!important;box-shadow:0 14px 35px #0003!important;padding:20px!important;color:var(--v8-text)!important}
+.panel h2{font-size:18px!important;letter-spacing:-.035em!important;color:#f0f4ed!important}
+.panel h3{color:var(--v8-accent)!important}
+.panel .muted,.muted{color:var(--v8-muted)!important}
+.notice{background:#d8ff520c!important;border:1px solid #d8ff5223!important;color:#cbd5c8!important;border-radius:12px!important}
+button{border-radius:11px!important}
+button.primary,.tabs button.active{background:var(--v8-accent)!important;color:#10150b!important;border-color:var(--v8-accent)!important;box-shadow:none!important}
+.field input,.field select,input,select,textarea{background:#0b1116!important;color:#f1f5ed!important;border:1px solid #ffffff25!important;border-radius:10px!important}
+.stat{padding:17px!important;min-width:0}
+.stat b{font-size:clamp(23px,2.6vw,34px)!important;color:var(--v8-accent)!important;letter-spacing:-.06em}
+.bar{background:#28343a!important}.fill{background:linear-gradient(90deg,var(--v8-accent),var(--v8-teal))!important}
+.pill{background:#d8ff5215!important;color:var(--v8-accent)!important;border:1px solid #d8ff5225!important}
+.recipe,.saved-card,.custom-day{background:#0c141a!important;border:1px solid var(--v8-line)!important;border-radius:13px!important;color:#e7eee7!important}
+.photo-grid,.movement-gallery{gap:12px!important}.photo-tile,.movement-card{height:190px!important;border-radius:16px!important}
+/* Dashboard is now a distinct command centre rather than a generic stack of panels. */
+#today .v8-page-grid>.command-hero,#today .v8-page-grid>.today-strip,#today .v8-page-grid>.section-heading,#today .v8-page-grid>.stats,#today .v8-page-grid>.shortcut-grid{grid-column:1/-1!important}
+#today .command-hero{display:grid!important;grid-template-columns:1.15fr .85fr!important;align-items:center!important;gap:24px!important;min-height:310px!important;padding:clamp(22px,4vw,42px)!important;margin:0 0 16px!important;border:1px solid #d8ff5228!important;border-radius:24px!important;background:radial-gradient(circle at 85% 15%,#d8ff5218,transparent 32%),linear-gradient(120deg,#1b2927,#111a20 70%)!important}
+#today .command-hero h2{font-size:clamp(38px,5vw,66px)!important;line-height:.94!important;letter-spacing:-.075em!important;color:#f3f6ee!important}
+#today .command-hero h2 em{color:var(--v8-accent)!important}
+#today .command-hero p{max-width:460px;color:#aab7ae!important;font-size:13px!important}
+#today .hero-visual img{width:100%!important;max-height:280px!important;object-fit:contain!important}
+#today .today-strip{margin:0 0 18px!important;padding:18px 22px!important;border-radius:16px!important;background:var(--v8-accent)!important;color:#10150b!important}
+#today .today-strip .eyebrow,#today .today-strip small{color:#46512c!important}
+#today .today-strip strong{font-size:19px!important;color:#11170b!important}
+#today .section-heading{margin:20px 0 10px!important}
+#today .stats{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px!important;margin-bottom:18px!important}
+#today .shortcut-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important}
+#today .shortcut-card{min-height:130px!important;border-radius:16px!important}
+#today .v8-page-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+#progress .progress-intro{grid-column:1/-1!important;padding:20px!important;border-radius:18px!important;background:#151f26!important;border:1px solid var(--v8-line)!important}
+#progress .panel{grid-column:span 1}
+#settings .theme-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.footer{color:#7f8d85!important}
+@media(min-width:1000px){
+ body{padding-left:250px!important}
+ .v8-sidebar{display:flex!important;position:fixed;z-index:90;inset:0 auto 0 0;width:250px;padding:24px 15px 16px;flex-direction:column;background:#080e12;border-right:1px solid var(--v8-line)}
+ .v8-brand{display:flex;align-items:center;gap:11px;padding:2px 8px 25px;border-bottom:1px solid var(--v8-line)}
+ .v8-brand-mark{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:var(--v8-accent);color:#10150b;font-weight:950;letter-spacing:-.08em}
+ .v8-brand b{display:block;font-size:13px;letter-spacing:-.04em}.v8-brand small{display:block;margin-top:4px;font-size:8px;letter-spacing:.15em;color:#85948a}
+ .v8-label{padding:21px 10px 8px;font-size:8px;letter-spacing:.2em;color:#65746b}
+ .v8-nav{display:grid;gap:4px}.v8-nav button{display:flex!important;align-items:center;gap:11px;width:100%;padding:11px 12px!important;text-align:left!important;border:1px solid transparent!important;background:transparent!important;color:#a1aea5!important;box-shadow:none!important;font-size:11px!important}
+ .v8-nav button span{width:20px;color:#8d9b91;text-align:center;font-size:15px}.v8-nav button.active{background:#d8ff5212!important;border-color:#d8ff5227!important;color:#f2f7e8!important}.v8-nav button.active span{color:var(--v8-accent)}
+ .v8-side-foot{margin-top:auto;border-top:1px solid var(--v8-line);padding:14px 10px;font-size:9px;line-height:1.7;color:#68776d}
+ header.app-header{padding:17px 34px!important}
+ main.wrap{padding:28px 36px 70px!important}
+ .tabs{display:none!important}
+ .v8-page-grid{gap:18px!important}
 }
-@media(max-width:899px){.v7-sidebar{display:none!important}header.app-header{padding:18px 17px 20px!important}.app-header .header-title-row{align-items:flex-start}.app-header .header-orbit{display:none!important}.app-header h1{font-size:35px!important;letter-spacing:-.07em!important}.app-header .brandline{margin-bottom:17px}.tabs{display:none!important}.bottom-nav{display:grid!important}main.wrap{padding-top:14px!important}.tab.active{padding-bottom:90px}#today .stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:999px){
+ header.app-header{padding:16px 16px 18px!important}
+ header.app-header .header-title-row{align-items:flex-start}
+ header.app-header .header-orbit{display:none!important}
+ header.app-header h1{font-size:34px!important}
+ main.wrap{padding:14px 14px 110px!important}
+ .tabs{display:none!important}
+ .bottom-nav{display:grid!important;position:fixed!important;z-index:70!important;left:10px!important;right:10px!important;bottom:calc(9px + env(safe-area-inset-bottom))!important;max-width:760px!important;margin:auto!important;grid-template-columns:repeat(5,1fr)!important;padding:7px!important;border:1px solid var(--v8-line)!important;border-radius:19px!important;background:#080e13f5!important;backdrop-filter:blur(20px)!important}
+ .bottom-nav button{display:flex!important;flex-direction:column!important;align-items:center!important;gap:3px!important;padding:5px 2px!important;background:transparent!important;border:0!important;color:#8f9c93!important}.bottom-nav button.active{color:var(--v8-accent)!important}.bottom-nav button span{font-size:19px!important}.bottom-nav button small{font-size:9px!important}
+ .v8-page-grid{grid-template-columns:1fr!important;gap:12px!important}
+ .v8-page-grid>*{grid-column:1/-1!important}
+ #today .command-hero{grid-template-columns:1fr!important;min-height:0!important;padding:22px!important}
+ #today .hero-visual img{max-height:190px!important}
+ #today .stats{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
+ #today .shortcut-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ #today .progress-short{grid-column:1/-1!important}
+ .screen-intro{padding:20px 0 22px!important}
+ .screen-intro:after{width:110px;height:110px;right:0}
+ .screen-intro h2{font-size:clamp(35px,10vw,48px)!important}
+ .panel{padding:16px!important}
+ .photo-tile,.movement-card{height:145px!important}
+ #settings .theme-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
 </style>
+
 </head><body>
-<aside class="v7-sidebar" aria-label="Winter Bulk navigation">
- <div class="v7-brand"><div class="v7-brand-mark">WB</div><div><b>WINTER BULK</b><small>PERFORMANCE OS · 26/27</small></div></div>
- <div class="v7-nav-label">WORKSPACE</div><nav class="v7-nav">
- <button class="active" data-v7-tab="today"><span class="v7-icon">⌂</span>Overview</button>
- <button data-v7-tab="recipes"><span class="v7-icon">◉</span>Nutrition & recipes</button>
- <button data-v7-tab="training"><span class="v7-icon">✳</span>Training log</button>
- <button data-v7-tab="progress"><span class="v7-icon">↗</span>Progress analytics</button></nav>
- <div class="v7-nav-label">TOOLS & LIBRARY</div><nav class="v7-nav">
- <button data-v7-tab="myplans"><span class="v7-icon">▤</span>Workout builder</button><button data-v7-tab="planner"><span class="v7-icon">▦</span>Meal planner</button>
- <button data-v7-tab="calculator"><span class="v7-icon">⌗</span>Macro calculator</button><button data-v7-tab="shop"><span class="v7-icon">▣</span>Shopping list</button>
- <button data-v7-tab="social"><span class="v7-icon">◎</span>Instagram saves</button><button data-v7-tab="library"><span class="v7-icon">◇</span>Exercise library</button>
- <button data-v7-tab="records"><span class="v7-icon">♜</span>Personal records</button><button data-v7-tab="guide"><span class="v7-icon">✧</span>Bulk playbook</button>
- <button data-v7-tab="settings"><span class="v7-icon">⚙</span>Settings & backup</button></nav>
- <div class="v7-side-foot">WINTER BUILD · SEASON 01<br>Consistency compounds.</div></aside>
+<aside class="v8-sidebar" aria-label="Main navigation"><div class="v8-brand"><div class="v8-brand-mark">WB</div><div><b>WINTER BULK COACH</b><small>PERFORMANCE SYSTEM · 26/27</small></div></div><div class="v8-label">YOUR WORKSPACE</div><nav class="v8-nav"><button class="active" data-v8-tab="today"><span>⌂</span>Overview</button><button data-v8-tab="recipes"><span>◉</span>Nutrition & recipes</button><button data-v8-tab="training"><span>✳</span>Training log</button><button data-v8-tab="progress"><span>↗</span>Progress analytics</button></nav><div class="v8-label">TOOLS & LIBRARY</div><nav class="v8-nav"><button data-v8-tab="myplans"><span>▤</span>Workout builder</button><button data-v8-tab="planner"><span>▦</span>Meal planner</button><button data-v8-tab="calculator"><span>⌗</span>Macro calculator</button><button data-v8-tab="shop"><span>▣</span>Shopping list</button><button data-v8-tab="social"><span>◎</span>Instagram saves</button><button data-v8-tab="library"><span>◇</span>Exercise library</button><button data-v8-tab="records"><span>♜</span>Personal records</button><button data-v8-tab="guide"><span>✧</span>Bulk playbook</button><button data-v8-tab="settings"><span>⚙</span>Settings & backup</button></nav><div class="v8-side-foot">WINTER BUILD · SEASON 01<br>Consistency compounds.</div></aside>
 <header class="app-header"><div class="brandline"><span class="brand-mark">WB</span><span class="brand-kicker">WINTER BULK / 26—27</span><button class="header-menu" id="openMore" aria-label="Open menu">•••</button></div><div class="header-title-row"><div><span class="eyebrow">YOUR PERSONAL PERFORMANCE HUB</span><h1>Build <span>better.</span></h1><p>Train with intent. Eat for growth. Track the work.</p></div><div class="header-orbit"><b>WB</b><i>SEASON 01</i></div></div></header>
 <main class="wrap">
 <nav class="tabs"><button class="active" data-tab="today">Today</button><button data-tab="recipes">Recipes</button><button data-tab="training">Training</button><button data-tab="social">Instagram saves</button><button data-tab="myplans">My plans</button><button data-tab="shop">Shopping</button><button data-tab="progress">Progress</button><button data-tab="guide">Bulk guide</button><button data-tab="planner">Plans</button><button data-tab="calculator">Calculator</button><button data-tab="library">Exercise library</button><button data-tab="records">Records</button><button data-tab="settings">Themes</button></nav>
@@ -493,15 +555,34 @@ document.querySelectorAll('.shortcut-card[data-tab]').forEach(b=>b.addEventListe
 const foodTiles=[['BREAKFAST','Protein porridge','https://images.unsplash.com/photo-1517673132405-a56a62b18caf?w=700&auto=format&fit=crop&q=80'],['LUNCH','Chicken & rice','https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=700&auto=format&fit=crop&q=80'],['DINNER','Salmon & greens','https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=700&auto=format&fit=crop&q=80'],['SNACK','Greek yoghurt bowl','https://images.unsplash.com/photo-1488477181946-6428a0291777?w=700&auto=format&fit=crop&q=80']];
 const gallery=document.getElementById('foodGallery');if(gallery){gallery.innerHTML=foodTiles.slice(0,2).map(x=>`<div class="photo-tile"><img loading="lazy" src="${x[2]}" alt="${x[1]}" onerror="this.style.display='none'"><span>${x[0]}</span><b>${x[1]}</b></div>`).join('')}
 
-</script><script id="winter-v7-navigation">
+</script>
+<script id="winter-v8-structural-layout">
 (function(){
- const links=[...document.querySelectorAll('[data-v7-tab]')];
- function activate(id){const target=document.querySelector('.tabs [data-tab="'+id+'"]');if(target)target.click();links.forEach(b=>b.classList.toggle('active',b.dataset.v7Tab===id));document.querySelectorAll('[data-bottom]').forEach(b=>b.classList.toggle('active',b.dataset.bottom===id));}
- links.forEach(b=>b.addEventListener('click',()=>activate(b.dataset.v7Tab)));
- document.querySelectorAll('.tabs [data-tab]').forEach(b=>b.addEventListener('click',()=>links.forEach(x=>x.classList.toggle('active',x.dataset.v7Tab===b.dataset.tab))));
- const title=document.querySelector('#today .command-hero h2');if(title)title.innerHTML='Build strength.<br><em>Own your winter.</em>';
- const intro=document.querySelector('#today .command-hero p');if(intro)intro.textContent='Your training, nutrition and progress — organised in one place.';
- document.body.classList.add('winter-v7');
+ const sections=[...document.querySelectorAll('section.tab')];
+ sections.forEach(section=>{
+  const intro=section.querySelector(':scope > .screen-intro');
+  const grid=document.createElement('div');grid.className='v8-page-grid';
+  const keep=new Set([intro]);
+  [...section.children].forEach(node=>{if(!keep.has(node))grid.appendChild(node)});
+  section.appendChild(grid);
+ });
+ const nav=document.querySelectorAll('[data-v8-tab]');
+ function activate(id){
+  const tab=document.querySelector('.tabs [data-tab="'+id+'"]');
+  if(tab)tab.click();
+  nav.forEach(b=>b.classList.toggle('active',b.dataset.v8Tab===id));
+  document.querySelectorAll('[data-bottom]').forEach(b=>b.classList.toggle('active',b.dataset.bottom===id));
+  window.scrollTo({top:0,behavior:'smooth'});
+ }
+ nav.forEach(b=>b.addEventListener('click',()=>activate(b.dataset.v8Tab)));
+ document.querySelectorAll('.tabs [data-tab]').forEach(b=>b.addEventListener('click',()=>nav.forEach(x=>x.classList.toggle('active',x.dataset.v8Tab===b.dataset.tab))));
+ document.querySelectorAll('[data-bottom]').forEach(b=>b.addEventListener('click',()=>nav.forEach(x=>x.classList.toggle('active',x.dataset.v8Tab===b.dataset.bottom))));
+ const heroTitle=document.querySelector('#today .command-hero h2');
+ if(heroTitle)heroTitle.innerHTML='Build strength.<br><em>Own your winter.</em>';
+ const heroCopy=document.querySelector('#today .command-hero p');
+ if(heroCopy)heroCopy.textContent='Your training, nutrition and progress — organised in one place.';
+ document.body.classList.add('winter-v8-ready');
 })();
 </script>
+
 </body></html>
